@@ -16,38 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qjD-bA-5hj">
-                            <size key="itemSize" width="130" height="130"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="qjD-bA-5hj">
+                            <size key="itemSize" width="138" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="rpO-1n-kb0" customClass="CollectionViewCell" customModule="CollectionView_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="138" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-st-cXK">
-                                            <rect key="frame" x="7" y="25" width="117" height="81"/>
-                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="34"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="usa" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-KF-HeF">
+                                            <rect key="frame" x="0.0" y="0.0" width="138" height="130"/>
+                                        </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="6QO-st-cXK" secondAttribute="bottom" constant="24" id="75h-Y8-cQY"/>
-                                    <constraint firstAttribute="trailing" secondItem="6QO-st-cXK" secondAttribute="trailing" constant="6" id="fC3-Jm-HkV"/>
-                                    <constraint firstItem="6QO-st-cXK" firstAttribute="top" secondItem="rpO-1n-kb0" secondAttribute="top" constant="25" id="fsw-jw-zN8"/>
-                                    <constraint firstItem="6QO-st-cXK" firstAttribute="leading" secondItem="rpO-1n-kb0" secondAttribute="leading" constant="7" id="ojj-La-CWJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="zwL-KF-HeF" secondAttribute="bottom" id="Q5k-0Y-gC6"/>
+                                    <constraint firstAttribute="trailing" secondItem="zwL-KF-HeF" secondAttribute="trailing" id="b8y-Lh-CkI"/>
+                                    <constraint firstItem="zwL-KF-HeF" firstAttribute="top" secondItem="rpO-1n-kb0" secondAttribute="top" id="cFq-rf-107"/>
+                                    <constraint firstItem="zwL-KF-HeF" firstAttribute="centerX" secondItem="rpO-1n-kb0" secondAttribute="centerX" id="daV-1X-j7f"/>
+                                    <constraint firstItem="zwL-KF-HeF" firstAttribute="centerY" secondItem="rpO-1n-kb0" secondAttribute="centerY" id="q3F-hV-THs"/>
+                                    <constraint firstItem="zwL-KF-HeF" firstAttribute="leading" secondItem="rpO-1n-kb0" secondAttribute="leading" id="zUf-Zd-GZF"/>
                                 </constraints>
-                                <size key="customSize" width="130" height="130"/>
+                                <size key="customSize" width="138" height="130"/>
                                 <connections>
-                                    <outlet property="testLbl" destination="6QO-st-cXK" id="KIh-Sp-CFA"/>
+                                    <outlet property="flag" destination="zwL-KF-HeF" id="ACB-Lm-oBW"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -82,8 +81,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbW-eu-sGg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2QJ-hr-xvg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2QJ-hr-xvg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,6 +107,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="usa" width="240" height="240"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

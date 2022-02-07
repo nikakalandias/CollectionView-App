@@ -9,14 +9,15 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+var flagArray = ["usa","au","gr","it","sw","sp","tr","br","gree"]
+
+
 class CollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
-        navBarAyarla(largeTitleColor: .white, backgoundColor: .darkGray, tintColor: .white, title: "Test Title", preferredLargeTitle: true)
+        navBarAyarla(largeTitleColor: .white, backgoundColor: .darkGray, tintColor: .white, title: "Countries", preferredLargeTitle: true)
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -24,14 +25,14 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return flagArray.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         if let customCell = cell as? CollectionViewCell {
-            customCell.testLbl.text = "\(indexPath.row)"
+            customCell.flag.image = UIImage(named: flagArray[indexPath.row])
             return customCell
         }
         return cell

@@ -9,6 +9,5 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var testLbl: UILabel!
-    
+    @IBOutlet weak var flag: UIImageView!
 }
