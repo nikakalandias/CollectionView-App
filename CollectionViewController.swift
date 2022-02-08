@@ -9,14 +9,14 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-var flagArray = ["usa","au","gr","it","sw","sp","tr","br","gree"]
+var flagArray = ["United States of America","Australia","Germany","Italy","Switzerland","Spain","Turkey","Brazil","Greece"]
 
+var selectedIndex = 0
 
 class CollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navBarAyarla(largeTitleColor: .white, backgoundColor: .darkGray, tintColor: .white, title: "Countries", preferredLargeTitle: true)
     }
     
@@ -39,11 +39,21 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tapped")
+        selectedIndex = indexPath.row
+        
+        performSegue(withIdentifier: "VC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ViewController {
+            vc.testImage = UIImage(named: flagArray[selectedIndex])
+            vc.testLabel = flagArray[selectedIndex]
+        }
     }
     
     
     //============================================================================
+    
     func navBarAyarla(largeTitleColor: UIColor, backgoundColor: UIColor, tintColor: UIColor, title: String, preferredLargeTitle: Bool) {
         
     if #available(iOS 13.0, *) { // iOS 13 ve sonrası için

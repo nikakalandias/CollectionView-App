@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +14,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eDq-uO-lCc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.50761217120000002" green="0.82166379690000002" blue="0.60182765890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="qjD-bA-5hj">
                             <size key="itemSize" width="138" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,6 +31,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="usa" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-KF-HeF">
                                             <rect key="frame" x="0.0" y="0.0" width="138" height="130"/>
+                                            <color key="backgroundColor" red="0.50761217120000002" green="0.82166379690000002" blue="0.60182765890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -56,6 +56,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Test Title" largeTitleDisplayMode="always" id="1jn-KD-lKP"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="VC" id="Xdq-GP-xBX"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwG-Sx-xfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,13 +71,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9E-DM-TYA">
+                                <rect key="frame" x="20" y="343" width="374" height="268"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-TW-doY">
+                                <rect key="frame" x="0.0" y="272" width="414" height="79"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="50"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.50761217120000002" green="0.82166379690000002" blue="0.60182765890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p9E-DM-TYA" firstAttribute="top" secondItem="zM8-TW-doY" secondAttribute="bottom" constant="-8" id="6El-sf-ZXm"/>
+                            <constraint firstItem="p9E-DM-TYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7HF-zO-fxw"/>
+                            <constraint firstItem="p9E-DM-TYA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8wC-cL-OwQ"/>
+                            <constraint firstItem="zM8-TW-doY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GFl-db-HgT"/>
+                            <constraint firstItem="zM8-TW-doY" firstAttribute="centerX" secondItem="p9E-DM-TYA" secondAttribute="centerX" constant="0.5" id="XCq-jR-6Sl"/>
+                            <constraint firstItem="zM8-TW-doY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="184" id="aOJ-da-JHj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p9E-DM-TYA" secondAttribute="bottom" constant="251" id="mqA-6J-kWx"/>
+                            <constraint firstItem="p9E-DM-TYA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="vja-9J-lAP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="zlD-p2-LgI"/>
+                    <connections>
+                        <outlet property="countryLabel" destination="zM8-TW-doY" id="woC-2S-wab"/>
+                        <outlet property="flagImage" destination="p9E-DM-TYA" id="Fnb-8T-uPu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="88"/>
+            <point key="canvasLocation" x="963.76811594202911" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IFc-4Q-UOq">
@@ -108,8 +137,5 @@
     </scenes>
     <resources>
         <image name="usa" width="240" height="240"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
