@@ -57,7 +57,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Test Title" largeTitleDisplayMode="always" id="1jn-KD-lKP"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="VC" id="Xdq-GP-xBX"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="VC" modalPresentationStyle="automatic" modalTransitionStyle="flipHorizontal" id="Xdq-GP-xBX"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwG-Sx-xfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,11 +69,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionView_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9E-DM-TYA">
-                                <rect key="frame" x="20" y="343" width="374" height="268"/>
+                                <rect key="frame" x="20" y="255" width="374" height="302"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-TW-doY">
                                 <rect key="frame" x="0.0" y="272" width="414" height="79"/>
